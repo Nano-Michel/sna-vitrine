@@ -21,8 +21,8 @@ export const content: Record<Lang, Content> = {
       name: 'Société Nationale Agronome',
       short: 'SNA',
       email: 'contact@sna.agro',
-      phone: '[Numéro fictif]',
-      address: '[Adresse fictive pour le site vitrine]'
+      phone: '237 699999999',
+      address: 'Yaoundé-Cameroun'
     },
     nav: {
       home: 'Accueil',
@@ -130,8 +130,8 @@ export const content: Record<Lang, Content> = {
       name: 'National Agronomy Agency',
       short: 'SNA',
       email: 'contact@sna.agro',
-      phone: '[Placeholder number]',
-      address: '[Placeholder address]'
+      phone: '237 699999999',
+      address: 'Yaoundé-Cameroon'
     },
     nav: {
       home: 'Home',

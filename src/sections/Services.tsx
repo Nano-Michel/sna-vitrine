@@ -12,8 +12,11 @@ export default function Services() {
         <SectionTitle title={t.servicesHeading} subtitle={t.servicesIntro} />
         <div className="row gx-md-4 gx-xl-5 gy-5 align-stretch">
           {/* Colonne image: même hauteur que la pile de cartes */}
-          <div className="col-lg-6 equal-col order-lg-1" data-aos="fade-right">
-              <img src="/nosServices.jpg" alt="Nos services" className="img-fluid rounded shadow-sm" />
+          <div className="col-lg-6 equal-col order-lg-1 position-relative" data-aos="fade-right">
+              <div className="shape bg-dot primary w-24 h-24" style={{ position: 'absolute', top: -16, left: -16, zIndex: 0 }} />
+              <figure className="position-relative" style={{ zIndex: 1 }}>
+                <img src="/nosServices.jpg" alt="Nos services" className="img-fluid rounded shadow-sm" />
+              </figure>
           </div>
           {/* Colonne cartes */}
           <div className="col-lg-6 order-lg-2 services-stack">
@@ -27,7 +30,8 @@ export default function Services() {
                     <div className="d-flex align-items-start">
                       <span className="icon-circle-soft pe-none me-3"><span className="number">{num}</span></span>
                       <div>
-                        <h5 className="mb-1 fw-semibold">{s.title}</h5>
+                        <h5 className="mb-1 fw-semibold">{s.icon && <i className={`bi ${s.icon} text-success me-2 small`}></i>}{s.title}</h5>
+                        <div className="mini-divider" />
                         <p className="mb-0 text-secondary">{s.description}</p>
                       </div>
                     </div>

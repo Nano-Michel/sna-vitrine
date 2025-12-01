@@ -8,15 +8,18 @@ export default function Hero() {
       className="py-5 hero-gradient hero-bg"
       style={{ ["--hero-bg" as any]: "url('/AcceuilSna1.jpg')" }}
     >
+      <div className="hero-scrim" aria-hidden="true" />
       <div className="container py-5">
         <div className="row align-items-center gy-4">
           <div className="col-lg-8" data-aos="fade-right">
-            <span className="badge bg-success-subtle text-success mb-3 px-3 py-2 rounded-pill">SNA • Agriculture durable</span>
-            <h1 className="display-4 fw-bold mb-3">{t.hero.title}</h1>
-            <p className="lead text-secondary mb-4">{t.hero.subtitle}</p>
-            <div className="d-flex gap-3">
-              <a href="#services" className="btn btn-gradient-success btn-lg btn-pill">{t.hero.ctaPrimary}</a>
-              <a href="#a-propos" className="btn btn-outline-success btn-lg btn-pill">{t.hero.ctaSecondary}</a>
+            <div className="hero-text-panel p-3 p-md-4">
+              <span className="badge bg-success-subtle text-success mb-3 px-3 py-2 rounded-pill">SNA • Agriculture durable</span>
+              <h1 className="display-4 fw-bold mb-3">{t.hero.title}</h1>
+              <p className="lead text-secondary mb-4">{t.hero.subtitle}</p>
+              <div className="d-flex gap-3">
+                <a href="#services" className="btn btn-gradient-success btn-lg btn-pill">{t.hero.ctaPrimary}</a>
+                <a href="#a-propos" className="btn btn-ghost-light btn-lg btn-pill">{t.hero.ctaSecondary}</a>
+              </div>
             </div>
             <div className="row mt-4 g-3">
               <div className="col-6 col-md-4">
