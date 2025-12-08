@@ -14,14 +14,14 @@ export default function Contact() {
             <div className="row gx-md-5 gy-5 position-relative" style={{ zIndex: 2 }}>
               <div className="col-md-6">
                 <figure className="rounded mt-md-10 position-relative">
-                  <img src="/nous-contacter1.jpg" alt="Équipe support SNA" className="img-fluid rounded shadow-sm" />
+                  <img src="/contact2.webp" alt="Équipe support SNA" className="img-fluid rounded shadow-sm" />
                 </figure>
               </div>
               <div className="col-md-6">
                 <div className="row gx-md-5 gy-5">
                   <div className="col-md-12 order-md-2">
                     <figure className="rounded">
-                      <img src="/nous-contacter2.jpg" alt="Conseiller SNA en échange avec un producteur" className="img-fluid rounded shadow-sm" />
+                      <img src="/contact1.avif" alt="Conseiller SNA en échange avec un producteur" className="img-fluid rounded shadow-sm" />
                     </figure>
                   </div>
                   <div className="col-md-10">

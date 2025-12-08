@@ -14,8 +14,37 @@ export default function Services() {
           {/* Colonne image: même hauteur que la pile de cartes */}
           <div className="col-lg-6 equal-col order-lg-1 position-relative" data-aos="fade-right">
               <div className="shape bg-dot primary w-24 h-24" style={{ position: 'absolute', top: -16, left: -16, zIndex: 0 }} />
-              <figure className="position-relative" style={{ zIndex: 1 }}>
-                <img src="/nosServices.jpg" alt="Nos services" className="img-fluid rounded shadow-sm" />
+              <figure className="position-relative d-flex flex-column gap-4" style={{ zIndex: 1 }}>
+                <div className="overflow-hidden rounded-4 shadow-sm hover-shadow transition-all" style={{ width: '100%' }}>
+                  <img 
+                    src="/services.jpg" 
+                    alt="Nos services" 
+                    className="img-fluid w-100 h-auto rounded-4"
+                    style={{
+                      transition: 'transform 0.3s ease-in-out',
+                    }}
+                  />
+                </div>
+                <div className="overflow-hidden rounded-4 shadow-sm hover-shadow transition-all ms-lg-5" style={{ width: '90%' }}>
+                  <img 
+                    src="/service.jpeg" 
+                    alt="Nos services" 
+                    className="img-fluid w-100 h-auto rounded-4"
+                    style={{
+                      transition: 'transform 0.3s ease-in-out',
+                    }}
+                  />
+                </div>
+                <div className="overflow-hidden rounded-4 shadow-sm hover-shadow transition-all mx-lg-3" style={{ width: '85%' }}>
+                  <img 
+                    src="/services3.jpg" 
+                    alt="Nos services" 
+                    className="img-fluid w-100 h-auto rounded-4"
+                    style={{
+                      transition: 'transform 0.3s ease-in-out',
+                    }}
+                  />
+                </div>
               </figure>
           </div>
           {/* Colonne cartes */}

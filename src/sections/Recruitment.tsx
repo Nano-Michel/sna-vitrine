@@ -39,20 +39,27 @@ export default function Recruitment() {
           <div className="col-lg-5 equal-col position-relative" data-aos="fade-right">
             <div className="shape bg-dot primary w-24 h-24" style={{ position: 'absolute', top: -16, left: -16, zIndex: 0 }} />
             <div style={{ position: 'relative', zIndex: 1 }}>
-              <figure className="rounded mt-3" data-aos="fade-up" data-aos-delay="100">
-                <video ref={videoRef} className="w-100 rounded shadow-sm" preload="metadata" muted playsInline aria-label="Vidéo de recrutement SNA">
-                  <source src="/recruitement.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la vidéo HTML5.
-                </video>
-              </figure>
+              <div className="overflow-hidden rounded-4 shadow-sm hover-shadow transition-all" style={{ width: '100%' }}>
+                <img 
+                  src="/recruite.png" 
+                  alt={t.recruitment.videoAlt}
+                  className="img-fluid w-100 h-auto rounded-4"
+                  style={{
+                    transition: 'transform 0.3s ease-in-out',
+                    objectFit: 'cover',
+                    minHeight: '300px',
+                    maxHeight: '400px'
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="col-lg-7 equal-col" data-aos="fade-left">
             <div className="bg-white border rounded shadow-sm card-hover p-4 text-center w-100 h-100 d-flex align-items-center justify-content-center flex-column">
               <div className="icon-badge mx-auto mb-3"><i className="bi bi-briefcase"></i></div>
-              <h2 className="fw-bold mb-2">Recrutement & Banque de CV</h2>
-              <p className="text-secondary mb-4">Soumettez votre CV pour étude et stockage, puis bénéficiez de mises en relation avec des recruteurs.</p>
-              <a href="#contact" className="btn btn-success btn-lg">Soumettre un CV</a>
+              <h2 className="fw-bold mb-2">{t.recruitment.title}</h2>
+              <p className="text-secondary mb-4">{t.recruitment.description}</p>
+              <a href="#contact" className="btn btn-success btn-lg">{t.recruitment.submitCv}</a>
             </div>
           </div>
         </div>

@@ -5,7 +5,19 @@ export type Service = { title: string; description: string; icon?: string };
 export type Content = {
   org: { name: string; short: string; email: string; phone: string; address: string };
   nav: { home: string; about: string; services: string; partnerships: string; info: string; recruitment: string; contact: string };
-  hero: { title: string; subtitle: string; ctaPrimary: string; ctaSecondary: string };
+  hero: { 
+    title: string; 
+    subtitle: string; 
+    ctaPrimary: string; 
+    ctaSecondary: string;
+    sustainableAgriculture: string;
+    stats: {
+      producers: string;
+      partnerships: string;
+      realTime: string;
+      data: string;
+    };
+  };
   about: { title: string; intro: string; bullets: string[]; closing: string };
   servicesHeading: string;
   servicesIntro: string;
@@ -13,6 +25,14 @@ export type Content = {
   realtime: { title: string; text: string };
   partnerships: { title: string; items: string[]; note: string };
   contact: { title: string; subtitle: string; addressLabel: string; phoneLabel: string; emailLabel: string };
+  cta: { title: string; subtitle: string };
+  recruitment: {
+    title: string;
+    description: string;
+    submitCv: string;
+    videoAlt: string;
+    browserNotSupported: string;
+  };
 };
 
 export const content: Record<Lang, Content> = {
@@ -38,7 +58,14 @@ export const content: Record<Lang, Content> = {
       subtitle:
         "Bienvenue sur le site de la Société Nationale Agronome (SNA), une institution dédiée à l'avancement de l'agriculture durable et à la prospérité des acteurs du secteur agricole.",
       ctaPrimary: 'Découvrir nos services',
-      ctaSecondary: 'À propos de la SNA'
+      ctaSecondary: 'À propos de la SNA',
+      sustainableAgriculture: 'Agriculture durable',
+      stats: {
+        producers: 'Producteurs',
+        partnerships: 'Partenariats',
+        realTime: 'Temps réel',
+        data: 'Données'
+      }
     },
     about: {
       title: 'À propos de la SNA',
@@ -123,6 +150,17 @@ export const content: Record<Lang, Content> = {
       addressLabel: 'Adresse',
       phoneLabel: 'Téléphone',
       emailLabel: 'Email'
+    },
+    cta: {
+      title: 'Innovation Agricole pour un Avenir Durable',
+      subtitle: 'Rejoignez-nous pour transformer l\'agriculture de demain avec des solutions durables et innovantes'
+    },
+    recruitment: {
+      title: 'Recrutement & Banque de CV',
+      description: 'Soumettez votre CV pour étude et stockage, puis bénéficiez de mises en relation avec des recruteurs.',
+      submitCv: 'Soumettre un CV',
+      videoAlt: 'Vidéo de recrutement SNA',
+      browserNotSupported: 'Votre navigateur ne supporte pas la vidéo HTML5.'
     }
   },
   en: {
@@ -147,7 +185,14 @@ export const content: Record<Lang, Content> = {
       subtitle:
         'Welcome to the National Agronomy Agency (SNA), dedicated to advancing sustainable agriculture and supporting stakeholders across the sector.',
       ctaPrimary: 'Explore our services',
-      ctaSecondary: 'About SNA'
+      ctaSecondary: 'About SNA',
+      sustainableAgriculture: 'Sustainable Agriculture',
+      stats: {
+        producers: 'Producers',
+        partnerships: 'Partnerships',
+        realTime: 'Real-time',
+        data: 'Data'
+      }
     },
     about: {
       title: 'About SNA',
@@ -195,6 +240,17 @@ export const content: Record<Lang, Content> = {
       addressLabel: 'Address',
       phoneLabel: 'Phone',
       emailLabel: 'Email'
+    },
+    cta: {
+      title: 'Agricultural Innovation for a Sustainable Future',
+      subtitle: 'Join us in shaping tomorrow\'s agriculture with sustainable and innovative solutions'
+    },
+    recruitment: {
+      title: 'Recruitment & CV Bank',
+      description: 'Submit your CV for review and storage, and benefit from connections with recruiters.',
+      submitCv: 'Submit CV',
+      videoAlt: 'SNA Recruitment Video',
+      browserNotSupported: 'Your browser does not support HTML5 video.'
     }
   }
 };

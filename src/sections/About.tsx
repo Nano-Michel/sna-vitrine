@@ -24,7 +24,7 @@ export default function About() {
           </div>
           <div className="col-lg-5" data-aos="fade-left">
             <figure className="rounded">
-              <img src="/Apropos3.jpg" alt="Présentation de la SNA" className="img-fluid rounded shadow-sm" />
+              <img src="/apropos.jpg" alt="Présentation de la SNA" className="img-fluid rounded shadow-sm" />
             </figure>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="row align-items-center gy-4">
           <div className="col-lg-8" data-aos="fade-right">
             <div className="hero-text-panel p-3 p-md-4">
-              <span className="badge bg-success-subtle text-success mb-3 px-3 py-2 rounded-pill">SNA • Agriculture durable</span>
+              <span className="badge bg-success-subtle text-success mb-3 px-3 py-2 rounded-pill">{t.org.short} • {t.hero.sustainableAgriculture}</span>
               <h1 className="display-4 fw-bold mb-3">{t.hero.title}</h1>
               <p className="lead text-secondary mb-4">{t.hero.subtitle}</p>
               <div className="d-flex gap-3">
@@ -27,7 +27,7 @@ export default function Hero() {
                   <i className="bi bi-people text-success fs-4"></i>
                   <div>
                     <div className="value">10k+</div>
-                    <div className="label">Producteurs</div>
+                    <div className="label">{t.hero.stats.producers}</div>
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ export default function Hero() {
                   <i className="bi bi-globe2 text-success fs-4"></i>
                   <div>
                     <div className="value">25+</div>
-                    <div className="label">Partenariats</div>
+                    <div className="label">{t.hero.stats.partnerships}</div>
                   </div>
                 </div>
               </div>
@@ -44,8 +44,8 @@ export default function Hero() {
                 <div className="stat" data-aos="fade-up" data-aos-delay="150">
                   <i className="bi bi-clipboard-data text-success fs-4"></i>
                   <div>
-                    <div className="value">Temps réel</div>
-                    <div className="label">Données</div>
+                    <div className="value">{t.hero.stats.realTime}</div>
+                    <div className="label">{t.hero.stats.data}</div>
                   </div>
                 </div>
               </div>

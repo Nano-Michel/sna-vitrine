@@ -7,8 +7,8 @@ export default function CTABanner() {
       <div className="container">
         <div className="row align-items-center gy-3">
           <div className="col-lg-8">
-            <h2 className="fw-bold mb-2">{t.org.name}</h2>
-            <p className="mb-0 opacity-90">{t.hero.subtitle}</p>
+            <h2 className="fw-bold mb-2">{t.cta.title}</h2>
+            <p className="mb-0 opacity-90">{t.cta.subtitle}</p>
           </div>
           <div className="col-lg-4 text-lg-end">
             <div className="d-flex gap-3 justify-content-lg-end">
