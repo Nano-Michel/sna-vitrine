@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="row gy-3 align-items-center">
           <div className="col-md">
             <div className="fw-semibold">{t.org.name}</div>
-            <div className="small">© {year} Nanodev • Tous droits réservés</div>
+            <div className="small">© {year} Nanodev • {t.org.rightsReserved}</div>
           </div>
           <div className="col-md text-md-end small">
             <a className="text-decoration-none text-light me-3" href={`mailto:${t.org.email}`}><i className="bi bi-envelope me-1"></i>{t.org.email}</a>

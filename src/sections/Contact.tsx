@@ -28,7 +28,7 @@ export default function Contact() {
                     <div className="card bg-pale-primary text-center counter-wrapper">
                       <div className="card-body py-11">
                         <h3 className="counter text-nowrap">5000+</h3>
-                        <p className="mb-0">Acteurs accompagnés</p>
+                        <p className="mb-0">{t.contact.actorsHelped}</p>
                       </div>
                     </div>
                   </div>
@@ -45,7 +45,7 @@ export default function Contact() {
               <li><i className="bi bi-envelope text-success me-2"></i><span className="fw-semibold me-1">{t.contact.emailLabel}:</span>{t.org.email}</li>
             </ul>
             <a href={`mailto:${t.org.email}`} className="btn btn-soft-primary btn-circle me-2" aria-label="Email"><i className="bi bi-envelope"></i></a>
-            <a href="#" className="btn btn-success rounded-pill mt-2">Prendre contact</a>
+            <a href="#" className="btn btn-success rounded-pill mt-2">{t.contact.contactButton}</a>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ export type Lang = 'fr' | 'en';
 export type Service = { title: string; description: string; icon?: string };
 
 export type Content = {
-  org: { name: string; short: string; email: string; phone: string; address: string };
+  org: { name: string; short: string; email: string; phone: string; address: string; rightsReserved: string };
   nav: { home: string; about: string; services: string; partnerships: string; info: string; recruitment: string; contact: string };
   hero: { 
     title: string; 
@@ -22,9 +22,18 @@ export type Content = {
   servicesHeading: string;
   servicesIntro: string;
   services: Service[];
-  realtime: { title: string; text: string };
+  realtime: {
+    title: string;
+    text: string;
+    locationTitle: string;
+    locationDesc: string;
+    organicTitle: string;
+    organicDesc: string;
+    alertsTitle: string;
+    alertsDesc: string;
+  };
   partnerships: { title: string; items: string[]; note: string };
-  contact: { title: string; subtitle: string; addressLabel: string; phoneLabel: string; emailLabel: string };
+  contact: { title: string; subtitle: string; addressLabel: string; phoneLabel: string; emailLabel: string; actorsHelped: string; contactButton: string };
   cta: { title: string; subtitle: string };
   recruitment: {
     title: string;
@@ -42,7 +51,8 @@ export const content: Record<Lang, Content> = {
       short: 'SNA',
       email: 'contact@sna.agro',
       phone: '237 699999999',
-      address: 'Yaoundé-Cameroun'
+      address: 'Yaoundé-Cameroun',
+      rightsReserved: 'Tous droits réservés'
     },
     nav: {
       home: 'Accueil',
@@ -130,8 +140,13 @@ export const content: Record<Lang, Content> = {
     ],
     realtime: {
       title: 'Informations en temps réel',
-      text:
-        "Accédez à des données actualisées par localisation : conditions de culture biologique, volumes et alertes de pénurie pour une décision informée."
+      text: "Accédez à des données actualisées par localisation : conditions de culture biologique, volumes et alertes de pénurie pour une décision informée.",
+      locationTitle: 'Localisation',
+      locationDesc: 'Cartographie des ressources et indicateurs locaux.',
+      organicTitle: 'Culture biologique',
+      organicDesc: 'Documentation des pratiques et conditions de culture.',
+      alertsTitle: 'Alertes',
+      alertsDesc: 'Suivi des pénuries et notifications clés.'
     },
     partnerships: {
       title: 'Partenariats',
@@ -149,7 +164,9 @@ export const content: Record<Lang, Content> = {
         "Pour toute demande d'information, de partenariat ou d'assistance, contactez-nous via le formulaire ou par les coordonnées suivantes.",
       addressLabel: 'Adresse',
       phoneLabel: 'Téléphone',
-      emailLabel: 'Email'
+      emailLabel: 'Email',
+      actorsHelped: '5000+ acteurs accompagnés',
+      contactButton: 'Prendre contact'
     },
     cta: {
       title: 'Innovation Agricole pour un Avenir Durable',
@@ -169,7 +186,8 @@ export const content: Record<Lang, Content> = {
       short: 'SNA',
       email: 'contact@sna.agro',
       phone: '237 699999999',
-      address: 'Yaoundé-Cameroon'
+      address: 'Yaounde-Cameroon',
+      rightsReserved: 'All rights reserved'
     },
     nav: {
       home: 'Home',
@@ -222,7 +240,13 @@ export const content: Record<Lang, Content> = {
     ],
     realtime: {
       title: 'Real-time information',
-      text: 'Access up-to-date agricultural data by location: organic conditions and shortage alerts.'
+      text: 'Access up-to-date agricultural data by location: organic conditions and shortage alerts.',
+      locationTitle: 'Location',
+      locationDesc: 'Mapping of resources and local indicators.',
+      organicTitle: 'Organic farming',
+      organicDesc: 'Documentation of practices and growing conditions.',
+      alertsTitle: 'Alerts',
+      alertsDesc: 'Shortage monitoring and key notifications.'
     },
     partnerships: {
       title: 'Partnerships',
@@ -239,7 +263,9 @@ export const content: Record<Lang, Content> = {
         'For information, partnerships or support, reach us via the online form or the following details.',
       addressLabel: 'Address',
       phoneLabel: 'Phone',
-      emailLabel: 'Email'
+      emailLabel: 'Email',
+      actorsHelped: '5000+ actors supported',
+      contactButton: 'Get in touch'
     },
     cta: {
       title: 'Agricultural Innovation for a Sustainable Future',
