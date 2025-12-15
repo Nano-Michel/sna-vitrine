@@ -30,10 +30,17 @@ export default function Recruitment() {
     return () => observer.disconnect();
   }, []);
   return (
-    <section id="recrutement" className="py-5">
+    <section id="recrutement" className="section-padding bg-light">
       <div className="container">
-        <div className="text-center">
-          <span className="section-chip"><i className="bi bi-briefcase"></i>{t.nav.recruitment}</span>
+        <div className="text-center mb-5" data-aos="fade-up">
+          <div className="mb-3">
+            <span className="section-chip">
+              <i className="bi bi-briefcase me-1"></i>
+              {t.nav.recruitment}
+            </span>
+          </div>
+          <h2 className="display-5 fw-bold mb-3">{t.recruitment.title}</h2>
+          <p className="lead text-secondary mx-auto" style={{ maxWidth: 760 }}>{t.recruitment.description}</p>
         </div>
         <div className="row align-stretch gy-4">
           <div className="col-lg-5 equal-col position-relative" data-aos="fade-right">
@@ -55,11 +62,13 @@ export default function Recruitment() {
             </div>
           </div>
           <div className="col-lg-7 equal-col" data-aos="fade-left">
-            <div className="bg-white border rounded shadow-sm card-hover p-4 text-center w-100 h-100 d-flex align-items-center justify-content-center flex-column">
-              <div className="icon-badge mx-auto mb-3"><i className="bi bi-briefcase"></i></div>
-              <h2 className="fw-bold mb-2">{t.recruitment.title}</h2>
-              <p className="text-secondary mb-4">{t.recruitment.description}</p>
-              <a href="#contact" className="btn btn-success btn-lg">{t.recruitment.submitCv}</a>
+            <div className="bg-white border rounded-4 shadow-sm p-5 text-center w-100 h-100 d-flex align-items-center justify-content-center flex-column">
+              <div className="icon-badge mx-auto mb-4" style={{ width: 80, height: 80, fontSize: '2rem' }}>
+                <i className="bi bi-briefcase"></i>
+              </div>
+              <h3 className="fw-bold mb-3">Rejoignez notre équipe</h3>
+              <p className="text-secondary mb-4">Envoyez-nous votre CV et nous vous contacterons dès qu'une opportunité correspondra à votre profil.</p>
+              <a href="#contact" className="btn btn-success btn-lg btn-pill px-5">{t.recruitment.submitCv}</a>
             </div>
           </div>
         </div>

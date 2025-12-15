@@ -4,7 +4,7 @@ export type Service = { title: string; description: string; icon?: string };
 
 export type Content = {
   org: { name: string; short: string; email: string; phone: string; address: string; rightsReserved: string };
-  nav: { home: string; about: string; services: string; partnerships: string; info: string; recruitment: string; contact: string };
+  nav: { home: string; about: string; services: string; seedBank: string; partnerships: string; info: string; recruitment: string; contact: string };
   hero: { 
     title: string; 
     subtitle: string; 
@@ -42,6 +42,33 @@ export type Content = {
     videoAlt: string;
     browserNotSupported: string;
   };
+  video: {
+    chip: string;
+    title: string;
+    subtitle: string;
+  };
+  seedBank: {
+    title: string;
+    tagline: string;
+    subtitle: string;
+    mission: string;
+    stats: {
+      samples: string;
+      species: string;
+      partners: string;
+    };
+    features: {
+      conservation: { title: string; desc: string };
+      distribution: { title: string; desc: string };
+      research: { title: string; desc: string };
+    };
+    forFarmers: { title: string; desc: string };
+    forPartners: { title: string; desc: string };
+    cta: string;
+    missionTitle: string;
+    joinNetwork: string;
+    joinNetworkDesc: string;
+  };
 };
 
 export const content: Record<Lang, Content> = {
@@ -58,6 +85,7 @@ export const content: Record<Lang, Content> = {
       home: 'Accueil',
       about: 'À propos',
       services: 'Services',
+      seedBank: 'Banque de Semences',
       partnerships: 'Partenariats',
       info: 'Infos',
       recruitment: 'Recrutement',
@@ -178,6 +206,48 @@ export const content: Record<Lang, Content> = {
       submitCv: 'Soumettre un CV',
       videoAlt: 'Vidéo de recrutement SNA',
       browserNotSupported: 'Votre navigateur ne supporte pas la vidéo HTML5.'
+    },
+    video: {
+      chip: 'Découvrez',
+      title: 'Notre Mission en Action',
+      subtitle: 'Découvrez comment la SNA accompagne les acteurs agricoles au quotidien.'
+    },
+    seedBank: {
+      title: 'Banque de Semences SNA',
+      tagline: 'Préserver les semences pour l\'avenir',
+      subtitle: 'Notre banque de semences offre un stockage sécurisé, gratuit et à long terme pour les variétés agricoles nationales.',
+      mission: 'Nous collaborons avec les agriculteurs et institutions pour préserver la biodiversité agricole et assurer la sécurité alimentaire future.',
+      stats: {
+        samples: 'Échantillons conservés',
+        species: 'Espèces répertoriées',
+        partners: 'Partenaires déposants'
+      },
+      features: {
+        conservation: {
+          title: 'Conservation',
+          desc: 'Stockage à long terme dans des conditions optimales pour préserver la viabilité des semences.'
+        },
+        distribution: {
+          title: 'Distribution',
+          desc: 'Accès facilité aux semences certifiées pour les agriculteurs et coopératives.'
+        },
+        research: {
+          title: 'Recherche',
+          desc: 'Collaboration avec les instituts de recherche pour améliorer les variétés locales.'
+        }
+      },
+      forFarmers: {
+        title: 'Pour les Agriculteurs',
+        desc: 'Accédez à des semences de qualité, adaptées à votre région et certifiées par la SNA.'
+      },
+      forPartners: {
+        title: 'Pour les Partenaires',
+        desc: 'Déposez vos échantillons gratuitement et contribuez à la préservation de notre patrimoine agricole.'
+      },
+      cta: 'Découvrir la Banque de Semences',
+      missionTitle: 'Notre Mission',
+      joinNetwork: 'Rejoignez notre réseau',
+      joinNetworkDesc: 'Ensemble, préservons le patrimoine agricole pour les générations futures.'
     }
   },
   en: {
@@ -193,6 +263,7 @@ export const content: Record<Lang, Content> = {
       home: 'Home',
       about: 'About',
       services: 'Services',
+      seedBank: 'Seed Bank',
       partnerships: 'Partnerships',
       info: 'Updates',
       recruitment: 'Recruitment',
@@ -277,6 +348,48 @@ export const content: Record<Lang, Content> = {
       submitCv: 'Submit CV',
       videoAlt: 'SNA Recruitment Video',
       browserNotSupported: 'Your browser does not support HTML5 video.'
+    },
+    video: {
+      chip: 'Discover',
+      title: 'Our Mission in Action',
+      subtitle: 'Discover how SNA supports agricultural stakeholders every day.'
+    },
+    seedBank: {
+      title: 'SNA Seed Bank',
+      tagline: 'Safeguarding Seeds for the Future',
+      subtitle: 'Our seed bank offers secure, free and long-term storage for national agricultural varieties.',
+      mission: 'We collaborate with farmers and institutions to preserve agricultural biodiversity and ensure future food security.',
+      stats: {
+        samples: 'Samples stored',
+        species: 'Species catalogued',
+        partners: 'Depositing partners'
+      },
+      features: {
+        conservation: {
+          title: 'Conservation',
+          desc: 'Long-term storage under optimal conditions to preserve seed viability.'
+        },
+        distribution: {
+          title: 'Distribution',
+          desc: 'Easy access to certified seeds for farmers and cooperatives.'
+        },
+        research: {
+          title: 'Research',
+          desc: 'Collaboration with research institutes to improve local varieties.'
+        }
+      },
+      forFarmers: {
+        title: 'For Farmers',
+        desc: 'Access quality seeds, adapted to your region and certified by SNA.'
+      },
+      forPartners: {
+        title: 'For Partners',
+        desc: 'Deposit your samples for free and contribute to preserving our agricultural heritage.'
+      },
+      cta: 'Discover the Seed Bank',
+      missionTitle: 'Our Mission',
+      joinNetwork: 'Join our network',
+      joinNetworkDesc: 'Together, let\'s preserve agricultural heritage for future generations.'
     }
   }
 };

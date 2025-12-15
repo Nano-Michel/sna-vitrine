@@ -3,56 +3,78 @@ import { useI18n } from "../i18n/I18nContext";
 export default function Hero() {
   const { t } = useI18n();
   return (
-    <section
-      id="accueil"
-      className="py-5 hero-gradient hero-bg"
-      style={{ ["--hero-bg" as any]: "url('/AcceuilSna1.jpg')" }}
-    >
-      <div className="hero-scrim" aria-hidden="true" />
-      <div className="container py-5">
-        <div className="row align-items-center gy-4">
-          <div className="col-lg-8" data-aos="fade-right">
-            <div className="hero-text-panel p-3 p-md-4">
-              <span className="badge bg-success-subtle text-success mb-3 px-3 py-2 rounded-pill">{t.org.short} • {t.hero.sustainableAgriculture}</span>
-              <h1 className="display-4 fw-bold mb-3">{t.hero.title}</h1>
-              <p className="lead text-secondary mb-4">{t.hero.subtitle}</p>
-              <div className="d-flex gap-3">
-                <a href="#services" className="btn btn-gradient-success btn-lg btn-pill">{t.hero.ctaPrimary}</a>
-                <a href="#a-propos" className="btn btn-ghost-light btn-lg btn-pill">{t.hero.ctaSecondary}</a>
-              </div>
+    <section id="accueil" className="hero-section">
+      {/* Background Image/Video */}
+      <div className="hero-bg-wrapper">
+        <img 
+          src="/AcceuilSna1.jpg" 
+          alt="SNA Hero" 
+          className="hero-bg-image"
+        />
+        {/* Optionnel: Vidéo de fond - décommenter quand vous avez une vidéo
+        <video
+          className="hero-bg-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        */}
+        <div className="hero-gradient-layer" />
+      </div>
+
+      {/* Content */}
+      <div className="container position-relative z-1">
+        <div className="row min-vh-100 align-items-center py-5">
+          <div className="col-lg-8 col-xl-7">
+            <div className="hero-chip-badge mb-4">
+              <i className="bi bi-leaf me-2"></i>
+              {t.org.short} • {t.hero.sustainableAgriculture}
             </div>
-            <div className="row mt-4 g-3">
-              <div className="col-6 col-md-4">
-                <div className="stat" data-aos="fade-up" data-aos-delay="50">
-                  <i className="bi bi-people text-success fs-4"></i>
-                  <div>
-                    <div className="value">10k+</div>
-                    <div className="label">{t.hero.stats.producers}</div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6 col-md-4">
-                <div className="stat" data-aos="fade-up" data-aos-delay="100">
-                  <i className="bi bi-globe2 text-success fs-4"></i>
-                  <div>
-                    <div className="value">25+</div>
-                    <div className="label">{t.hero.stats.partnerships}</div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6 col-md-4">
-                <div className="stat" data-aos="fade-up" data-aos-delay="150">
-                  <i className="bi bi-clipboard-data text-success fs-4"></i>
-                  <div>
-                    <div className="value">{t.hero.stats.realTime}</div>
-                    <div className="label">{t.hero.stats.data}</div>
-                  </div>
-                </div>
-              </div>
+            <h1 className="hero-title display-3 fw-bold text-white mb-4">
+              {t.hero.title}
+            </h1>
+            <p className="hero-description lead text-white opacity-90 mb-5">
+              {t.hero.subtitle}
+            </p>
+            <div className="d-flex flex-wrap gap-3">
+              <a href="#services" className="btn btn-light btn-lg btn-pill px-4">
+                {t.hero.ctaPrimary}
+              </a>
+              <a href="#a-propos" className="btn btn-outline-light btn-lg btn-pill px-4">
+                {t.hero.ctaSecondary}
+              </a>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Stats Bar - Fixed at bottom */}
+      <div className="hero-stats-container">
+        <div className="container">
+          <div className="hero-stats-row">
+            <div className="hero-stat-item">
+              <span className="stat-number">10,000+</span>
+              <span className="stat-text">{t.hero.stats.producers}</span>
+            </div>
+            <div className="hero-stat-item">
+              <span className="stat-number">25+</span>
+              <span className="stat-text">{t.hero.stats.partnerships}</span>
+            </div>
+            <div className="hero-stat-item">
+              <span className="stat-number">24/7</span>
+              <span className="stat-text">{t.hero.stats.data}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <a href="#a-propos" className="hero-scroll-btn">
+        <i className="bi bi-chevron-down"></i>
+      </a>
     </section>
   );
 }

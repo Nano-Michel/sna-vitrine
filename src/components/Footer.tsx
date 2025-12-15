@@ -8,7 +8,10 @@ export default function Footer() {
       <div className="container">
         <div className="row gy-3 align-items-center">
           <div className="col-md">
-            <div className="fw-semibold">{t.org.name}</div>
+            <div className="d-flex align-items-center gap-2 mb-2">
+              <img src="/logo.png" alt={t.org.short} className="footer-logo" />
+              <span className="fw-semibold">{t.org.name}</span>
+            </div>
             <div className="small">© {year} Nanodev • {t.org.rightsReserved}</div>
           </div>
           <div className="col-md text-md-end small">

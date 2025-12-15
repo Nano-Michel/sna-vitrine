@@ -1,31 +1,45 @@
-import SectionTitle from "../components/SectionTitle";
 import { useI18n } from "../i18n/I18nContext";
 
 export default function About() {
   const { t } = useI18n();
   return (
-    <section id="a-propos" className="py-5">
+    <section id="a-propos" className="section-padding">
       <div className="container">
-        <div className="text-center">
-          <span className="section-chip"><i className="bi bi-info-circle"></i>{t.nav.about}</span>
-        </div>
-        <SectionTitle title={t.about.title} subtitle={t.about.intro} />
-        <div className="row align-items-start gy-4">
-          <div className="col-lg-7">
-            <ul className="list-group list-group-flush list-check" data-aos="fade-up">
-              {t.about.bullets.map((b, i) => (
-                <li key={i} className="list-group-item">
-                  <i className="bi bi-check2-circle text-success me-2"></i>
-                  {b}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4 text-secondary" data-aos="fade-up">{t.about.closing}</p>
+        <div className="row align-items-center gy-5">
+          {/* Image */}
+          <div className="col-lg-5" data-aos="fade-right">
+            <div className="about-image-wrapper">
+              <img 
+                src="/apropos.jpg" 
+                alt="Présentation de la SNA" 
+                className="img-fluid rounded-4 shadow-lg" 
+              />
+            </div>
           </div>
-          <div className="col-lg-5" data-aos="fade-left">
-            <figure className="rounded">
-              <img src="/apropos.jpg" alt="Présentation de la SNA" className="img-fluid rounded shadow-sm" />
-            </figure>
+          
+          {/* Content */}
+          <div className="col-lg-7" data-aos="fade-left">
+            <div className="mb-3">
+              <span className="section-chip">
+                <i className="bi bi-info-circle me-1"></i>
+                {t.nav.about}
+              </span>
+            </div>
+            <h2 className="display-5 fw-bold mb-4">{t.about.title}</h2>
+            <p className="lead text-secondary mb-4">{t.about.intro}</p>
+            
+            <div className="about-features mb-4">
+              {t.about.bullets.map((b, i) => (
+                <div key={i} className="about-feature-item">
+                  <div className="feature-check">
+                    <i className="bi bi-check-lg"></i>
+                  </div>
+                  <span>{b}</span>
+                </div>
+              ))}
+            </div>
+            
+            <p className="text-secondary fst-italic">{t.about.closing}</p>
           </div>
         </div>
       </div>

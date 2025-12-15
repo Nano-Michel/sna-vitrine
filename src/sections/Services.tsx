@@ -1,15 +1,20 @@
 import { useI18n } from "../i18n/I18nContext";
-import SectionTitle from "../components/SectionTitle";
 
 export default function Services() {
   const { t } = useI18n();
   return (
-    <section id="services" className="py-5 bg-body-tertiary">
+    <section id="services" className="section-padding bg-light">
       <div className="container">
-        <div className="text-center">
-          <span className="section-chip"><i className="bi bi-grid"></i>{t.nav.services}</span>
+        <div className="text-center mb-5" data-aos="fade-up">
+          <div className="mb-3">
+            <span className="section-chip">
+              <i className="bi bi-grid me-1"></i>
+              {t.nav.services}
+            </span>
+          </div>
+          <h2 className="display-5 fw-bold mb-3">{t.servicesHeading}</h2>
+          <p className="lead text-secondary mx-auto" style={{ maxWidth: 760 }}>{t.servicesIntro}</p>
         </div>
-        <SectionTitle title={t.servicesHeading} subtitle={t.servicesIntro} />
         <div className="row gx-md-4 gx-xl-5 gy-5 align-stretch">
           {/* Colonne image: même hauteur que la pile de cartes */}
           <div className="col-lg-6 equal-col order-lg-1 position-relative" data-aos="fade-right">
