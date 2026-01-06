@@ -1336,6 +1336,22 @@ figure.rounded .bg-cover { border-radius: .5rem; }
   }
 }
 
+@media (min-width: 993px) and (max-height: 900px) {
+  .hero-section .row.min-vh-100 {
+    align-items: flex-start !important;
+    padding-top: clamp(3.5rem, 6vh, 5rem);
+    padding-bottom: clamp(260px, 32vh, 420px);
+  }
+
+  .hero-section .hero-stats-container {
+    bottom: clamp(20px, 5vh, 80px);
+  }
+
+  .hero-section .hero-scroll-btn {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .hero-stats-row {
     flex-direction: column;

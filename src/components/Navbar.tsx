@@ -52,7 +52,7 @@ export default function Navbar() {
           data-bs-target="#mainNavbar"
           aria-controls="mainNavbar"
           aria-expanded="false"
-          aria-label="Basculer la navigation"
+          aria-label={t.nav.toggleLabel}
         >
           <span className="navbar-toggler-icon"></span>
         </button>

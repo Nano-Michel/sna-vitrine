@@ -66,8 +66,8 @@ export default function Recruitment() {
               <div className="icon-badge mx-auto mb-4" style={{ width: 80, height: 80, fontSize: '2rem' }}>
                 <i className="bi bi-briefcase"></i>
               </div>
-              <h3 className="fw-bold mb-3">Rejoignez notre équipe</h3>
-              <p className="text-secondary mb-4">Envoyez-nous votre CV et nous vous contacterons dès qu'une opportunité correspondra à votre profil.</p>
+              <h3 className="fw-bold mb-3">{t.recruitment.joinTeamTitle}</h3>
+              <p className="text-secondary mb-4">{t.recruitment.joinTeamDesc}</p>
               <a href="#contact" className="btn btn-success btn-lg btn-pill px-5">{t.recruitment.submitCv}</a>
             </div>
           </div>

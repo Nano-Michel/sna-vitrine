@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="hero-bg-wrapper">
         <img 
           src="/AcceuilSna1.jpg" 
-          alt="SNA Hero" 
+          alt={t.org.short} 
           className="hero-bg-image"
         />
         {/* Optionnel: Vidéo de fond - décommenter quand vous avez une vidéo

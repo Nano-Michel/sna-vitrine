@@ -23,7 +23,7 @@ export default function Services() {
                 <div className="overflow-hidden rounded-4 shadow-sm hover-shadow transition-all" style={{ width: '100%' }}>
                   <img 
                     src="/services.jpg" 
-                    alt="Nos services" 
+                    alt={t.servicesImageAlt} 
                     className="img-fluid w-100 h-auto rounded-4"
                     style={{
                       transition: 'transform 0.3s ease-in-out',
@@ -33,7 +33,7 @@ export default function Services() {
                 <div className="overflow-hidden rounded-4 shadow-sm hover-shadow transition-all ms-lg-5" style={{ width: '90%' }}>
                   <img 
                     src="/service.jpeg" 
-                    alt="Nos services" 
+                    alt={t.servicesImageAlt} 
                     className="img-fluid w-100 h-auto rounded-4"
                     style={{
                       transition: 'transform 0.3s ease-in-out',
@@ -43,7 +43,7 @@ export default function Services() {
                 <div className="overflow-hidden rounded-4 shadow-sm hover-shadow transition-all mx-lg-3" style={{ width: '85%' }}>
                   <img 
                     src="/services3.jpg" 
-                    alt="Nos services" 
+                    alt={t.servicesImageAlt} 
                     className="img-fluid w-100 h-auto rounded-4"
                     style={{
                       transition: 'transform 0.3s ease-in-out',

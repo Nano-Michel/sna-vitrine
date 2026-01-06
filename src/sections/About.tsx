@@ -3,7 +3,7 @@ import { useI18n } from "../i18n/I18nContext";
 export default function About() {
   const { t } = useI18n();
   return (
-    <section id="a-propos" className="section-padding">
+    <section id="a-propos" className="section-padding bg-white">
       <div className="container">
         <div className="row align-items-center gy-5">
           {/* Image */}
@@ -11,7 +11,7 @@ export default function About() {
             <div className="about-image-wrapper">
               <img 
                 src="/apropos.jpg" 
-                alt="Présentation de la SNA" 
+                alt={t.about.title} 
                 className="img-fluid rounded-4 shadow-lg" 
               />
             </div>

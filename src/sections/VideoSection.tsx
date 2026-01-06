@@ -30,13 +30,13 @@ export default function VideoSection() {
                 <div className="video-placeholder">
                   <img 
                     src="/AcceuilSna1.jpg" 
-                    alt="Video thumbnail"
+                    alt={t.video.thumbnailAlt}
                     className="video-thumbnail"
                   />
                   <button 
                     className="play-button"
                     onClick={() => setIsPlaying(true)}
-                    aria-label="Play video"
+                    aria-label={t.video.playAriaLabel}
                   >
                     <i className="bi bi-play-fill"></i>
                   </button>

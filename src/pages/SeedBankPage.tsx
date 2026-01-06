@@ -15,7 +15,7 @@ export default function SeedBankPage() {
         {/* Hero Section */}
         <section className="seedbank-hero">
           <div className="hero-bg-wrapper">
-            <img src="/AcceuilSna1.jpg" alt="Seed Bank" className="hero-bg-image" />
+            <img src="/stockageSemence.jpg" alt={t.nav.seedBank} className="hero-bg-image" />
             <div className="hero-gradient-layer" />
           </div>
           
@@ -63,8 +63,8 @@ export default function SeedBankPage() {
             <div className="row align-items-center gy-5">
               <div className="col-lg-6">
                 <img 
-                  src="/AcceuilSna1.jpg" 
-                  alt="Seed Bank Mission" 
+                  src="/discussion.jpg" 
+                  alt={t.seedBank.missionTitle} 
                   className="img-fluid rounded-4 shadow-lg"
                 />
               </div>
@@ -80,9 +80,12 @@ export default function SeedBankPage() {
                   {t.seedBank.mission}
                 </p>
                 <ul className="list-unstyled">
-                  <li className="mb-2"><i className="bi bi-check-circle-fill text-success me-2"></i>Conservation à long terme</li>
-                  <li className="mb-2"><i className="bi bi-check-circle-fill text-success me-2"></i>Préservation de la biodiversité</li>
-                  <li className="mb-2"><i className="bi bi-check-circle-fill text-success me-2"></i>Sécurité alimentaire future</li>
+                  {t.seedBank.missionBullets.map((b, i) => (
+                    <li className="mb-2" key={i}>
+                      <i className="bi bi-check-circle-fill text-success me-2"></i>
+                      {b}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -94,8 +97,11 @@ export default function SeedBankPage() {
           <div className="container">
             <div className="row justify-content-center mb-5">
               <div className="col-lg-8 text-center">
-                <h2 className="display-5 fw-bold mb-3">Nos Services</h2>
-                <p className="lead opacity-75">Une infrastructure complète pour la conservation des semences</p>
+                <h2 className="display-5 fw-bold mb-3">
+                  <i className="bi bi-microscope me-2"></i>
+                  {t.seedBank.servicesHeading}
+                </h2>
+                <p className="lead opacity-75">{t.seedBank.servicesIntro}</p>
               </div>
             </div>
             <div className="row g-4">
@@ -123,7 +129,7 @@ export default function SeedBankPage() {
                 <div className="feature-card-dark h-100">
                   <div className="feature-number">03</div>
                   <div className="feature-icon-dark">
-                    <i className="bi bi-microscope"></i>
+                    <i className="bi bi-search"></i>
                   </div>
                   <h3 className="h4 fw-bold mb-3">{t.seedBank.features.research.title}</h3>
                   <p className="opacity-75 mb-0">{t.seedBank.features.research.desc}</p>
@@ -141,11 +147,11 @@ export default function SeedBankPage() {
                 <div className="mb-3">
                   <span className="section-chip">
                     <i className="bi bi-play-circle me-1"></i>
-                    Découvrez
+                    {t.seedBank.actionVideo.chip}
                   </span>
                 </div>
-                <h2 className="display-5 fw-bold mb-3">La Banque de Semences en Action</h2>
-                <p className="lead text-secondary">Découvrez comment nous préservons le patrimoine agricole</p>
+                <h2 className="display-5 fw-bold mb-3">{t.seedBank.actionVideo.title}</h2>
+                <p className="lead text-secondary">{t.seedBank.actionVideo.subtitle}</p>
               </div>
             </div>
             <div className="row justify-content-center">
@@ -153,8 +159,8 @@ export default function SeedBankPage() {
                 <div className="video-container-modern">
                   {!videoPlaying ? (
                     <div className="video-poster">
-                      <img src="/AcceuilSna1.jpg" alt="Video poster" className="w-100 rounded-4" />
-                      <button className="play-btn-modern" onClick={() => setVideoPlaying(true)}>
+                      <img src="/discussions.jpg" alt={t.seedBank.actionVideo.posterAlt} className="w-100 rounded-4" />
+                      <button className="play-btn-modern" onClick={() => setVideoPlaying(true)} aria-label={t.seedBank.actionVideo.playAriaLabel}>
                         <i className="bi bi-play-fill"></i>
                       </button>
                     </div>

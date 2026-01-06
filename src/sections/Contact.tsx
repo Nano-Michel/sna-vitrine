@@ -14,14 +14,14 @@ export default function Contact() {
             <div className="row gx-md-5 gy-5 position-relative" style={{ zIndex: 2 }}>
               <div className="col-md-6">
                 <figure className="rounded mt-md-10 position-relative">
-                  <img src="/contact2.webp" alt="Équipe support SNA" className="img-fluid rounded shadow-sm" />
+                  <img src="/contact2.webp" alt={t.contact.supportTeamAlt} className="img-fluid rounded shadow-sm" />
                 </figure>
               </div>
               <div className="col-md-6">
                 <div className="row gx-md-5 gy-5">
                   <div className="col-md-12 order-md-2">
                     <figure className="rounded">
-                      <img src="/contact1.avif" alt="Conseiller SNA en échange avec un producteur" className="img-fluid rounded shadow-sm" />
+                      <img src="/contact1.avif" alt={t.contact.advisorAlt} className="img-fluid rounded shadow-sm" />
                     </figure>
                   </div>
                   <div className="col-md-10">
@@ -44,7 +44,7 @@ export default function Contact() {
               <li className="mb-2"><i className="bi bi-telephone text-success me-2"></i><span className="fw-semibold me-1">{t.contact.phoneLabel}:</span>{t.org.phone}</li>
               <li><i className="bi bi-envelope text-success me-2"></i><span className="fw-semibold me-1">{t.contact.emailLabel}:</span>{t.org.email}</li>
             </ul>
-            <a href={`mailto:${t.org.email}`} className="btn btn-soft-primary btn-circle me-2" aria-label="Email"><i className="bi bi-envelope"></i></a>
+            <a href={`mailto:${t.org.email}`} className="btn btn-soft-primary btn-circle me-2" aria-label={t.contact.emailLabel}><i className="bi bi-envelope"></i></a>
             <a href="#" className="btn btn-success rounded-pill mt-2">{t.contact.contactButton}</a>
           </div>
         </div>

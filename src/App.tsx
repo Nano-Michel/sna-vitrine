@@ -10,6 +10,7 @@ import Recruitment from './sections/Recruitment'
 import Contact from './sections/Contact'
 import CTABanner from './components/CTABanner'
 import SeedBankPage from './pages/SeedBankPage'
+import Realtime from './sections/Realtime'
 
 // Page d'accueil
 function HomePage() {
@@ -22,6 +23,7 @@ function HomePage() {
         <VideoSection />
         <Services />
         <Partnerships />
+        <Realtime />
         <CTABanner />
         <Recruitment />
         <Contact />

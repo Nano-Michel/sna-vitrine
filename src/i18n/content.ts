@@ -4,7 +4,7 @@ export type Service = { title: string; description: string; icon?: string };
 
 export type Content = {
   org: { name: string; short: string; email: string; phone: string; address: string; rightsReserved: string };
-  nav: { home: string; about: string; services: string; seedBank: string; partnerships: string; info: string; recruitment: string; contact: string };
+  nav: { home: string; about: string; services: string; seedBank: string; partnerships: string; info: string; recruitment: string; contact: string; toggleLabel: string };
   hero: { 
     title: string; 
     subtitle: string; 
@@ -21,6 +21,7 @@ export type Content = {
   about: { title: string; intro: string; bullets: string[]; closing: string };
   servicesHeading: string;
   servicesIntro: string;
+  servicesImageAlt: string;
   services: Service[];
   realtime: {
     title: string;
@@ -33,12 +34,24 @@ export type Content = {
     alertsDesc: string;
   };
   partnerships: { title: string; items: string[]; note: string };
-  contact: { title: string; subtitle: string; addressLabel: string; phoneLabel: string; emailLabel: string; actorsHelped: string; contactButton: string };
+  contact: { 
+    title: string; 
+    subtitle: string; 
+    addressLabel: string; 
+    phoneLabel: string; 
+    emailLabel: string; 
+    actorsHelped: string; 
+    contactButton: string; 
+    supportTeamAlt: string; 
+    advisorAlt: string 
+  };
   cta: { title: string; subtitle: string };
   recruitment: {
     title: string;
     description: string;
     submitCv: string;
+    joinTeamTitle: string;
+    joinTeamDesc: string;
     videoAlt: string;
     browserNotSupported: string;
   };
@@ -46,21 +59,33 @@ export type Content = {
     chip: string;
     title: string;
     subtitle: string;
+    thumbnailAlt: string;
+    playAriaLabel: string;
   };
   seedBank: {
     title: string;
     tagline: string;
     subtitle: string;
     mission: string;
+    missionBullets: string[];
     stats: {
       samples: string;
       species: string;
       partners: string;
     };
+    servicesHeading: string;
+    servicesIntro: string;
     features: {
       conservation: { title: string; desc: string };
       distribution: { title: string; desc: string };
       research: { title: string; desc: string };
+    };
+    actionVideo: {
+      chip: string;
+      title: string;
+      subtitle: string;
+      posterAlt: string;
+      playAriaLabel: string;
     };
     forFarmers: { title: string; desc: string };
     forPartners: { title: string; desc: string };
@@ -89,7 +114,8 @@ export const content: Record<Lang, Content> = {
       partnerships: 'Partenariats',
       info: 'Infos',
       recruitment: 'Recrutement',
-      contact: 'Contact'
+      contact: 'Contact',
+      toggleLabel: 'Basculer la navigation'
     },
     hero: {
       title: 'Vers une agriculture durable et prospère',
@@ -122,6 +148,7 @@ export const content: Record<Lang, Content> = {
     servicesHeading: 'Nos Services',
     servicesIntro:
       "La SNA offre une gamme complète de services pour accompagner les acteurs du secteur agricole, des petits producteurs aux entreprises internationales.",
+    servicesImageAlt: 'Nos services',
     services: [
       {
         title: 'Recensement & Cartographie',
@@ -194,7 +221,9 @@ export const content: Record<Lang, Content> = {
       phoneLabel: 'Téléphone',
       emailLabel: 'Email',
       actorsHelped: '5000+ acteurs accompagnés',
-      contactButton: 'Prendre contact'
+      contactButton: 'Prendre contact',
+      supportTeamAlt: 'Équipe support SNA',
+      advisorAlt: 'Conseiller SNA en échange avec un producteur'
     },
     cta: {
       title: 'Innovation Agricole pour un Avenir Durable',
@@ -204,24 +233,35 @@ export const content: Record<Lang, Content> = {
       title: 'Recrutement & Banque de CV',
       description: 'Soumettez votre CV pour étude et stockage, puis bénéficiez de mises en relation avec des recruteurs.',
       submitCv: 'Soumettre un CV',
+      joinTeamTitle: 'Rejoignez notre équipe',
+      joinTeamDesc: "Envoyez-nous votre CV et nous vous contacterons dès qu'une opportunité correspondra à votre profil.",
       videoAlt: 'Vidéo de recrutement SNA',
       browserNotSupported: 'Votre navigateur ne supporte pas la vidéo HTML5.'
     },
     video: {
       chip: 'Découvrez',
       title: 'Notre Mission en Action',
-      subtitle: 'Découvrez comment la SNA accompagne les acteurs agricoles au quotidien.'
+      subtitle: 'Découvrez comment la SNA accompagne les acteurs agricoles au quotidien.',
+      thumbnailAlt: 'Aperçu vidéo',
+      playAriaLabel: 'Lire la vidéo'
     },
     seedBank: {
       title: 'Banque de Semences SNA',
       tagline: 'Préserver les semences pour l\'avenir',
       subtitle: 'Notre banque de semences offre un stockage sécurisé, gratuit et à long terme pour les variétés agricoles nationales.',
       mission: 'Nous collaborons avec les agriculteurs et institutions pour préserver la biodiversité agricole et assurer la sécurité alimentaire future.',
+      missionBullets: [
+        'Conservation à long terme',
+        'Préservation de la biodiversité',
+        'Sécurité alimentaire future'
+      ],
       stats: {
         samples: 'Échantillons conservés',
         species: 'Espèces répertoriées',
         partners: 'Partenaires déposants'
       },
+      servicesHeading: 'Nos Services',
+      servicesIntro: 'Une infrastructure complète pour la conservation des semences',
       features: {
         conservation: {
           title: 'Conservation',
@@ -235,6 +275,13 @@ export const content: Record<Lang, Content> = {
           title: 'Recherche',
           desc: 'Collaboration avec les instituts de recherche pour améliorer les variétés locales.'
         }
+      },
+      actionVideo: {
+        chip: 'Découvrez',
+        title: 'La Banque de Semences en Action',
+        subtitle: 'Découvrez comment nous préservons le patrimoine agricole',
+        posterAlt: 'Aperçu vidéo',
+        playAriaLabel: 'Lire la vidéo'
       },
       forFarmers: {
         title: 'Pour les Agriculteurs',
@@ -256,7 +303,7 @@ export const content: Record<Lang, Content> = {
       short: 'SNA',
       email: 'contact@sna.agro',
       phone: '237 699999999',
-      address: 'Yaounde-Cameroon',
+      address: 'Yaoundé-Cameroon',
       rightsReserved: 'All rights reserved'
     },
     nav: {
@@ -267,7 +314,8 @@ export const content: Record<Lang, Content> = {
       partnerships: 'Partnerships',
       info: 'Updates',
       recruitment: 'Recruitment',
-      contact: 'Contact'
+      contact: 'Contact',
+      toggleLabel: 'Toggle navigation'
     },
     hero: {
       title: 'Toward sustainable and prosperous agriculture',
@@ -300,6 +348,7 @@ export const content: Record<Lang, Content> = {
     servicesHeading: 'Our Services',
     servicesIntro:
       'SNA offers a comprehensive suite of services to support agricultural stakeholders, from small producers to global enterprises.',
+    servicesImageAlt: 'Our services',
     services: [
       { title: 'Survey & Mapping', description: 'Comprehensive survey of producers, outputs and available lands, with secure online land purchases.', icon: 'bi-geo-alt' },
       { title: 'Financial Support & Training', description: 'Loan requests, financing and specialized training with rigorous proposal analysis.', icon: 'bi-mortarboard' },
@@ -336,7 +385,9 @@ export const content: Record<Lang, Content> = {
       phoneLabel: 'Phone',
       emailLabel: 'Email',
       actorsHelped: '5000+ actors supported',
-      contactButton: 'Get in touch'
+      contactButton: 'Get in touch',
+      supportTeamAlt: 'SNA support team',
+      advisorAlt: 'SNA advisor discussing with a producer'
     },
     cta: {
       title: 'Agricultural Innovation for a Sustainable Future',
@@ -346,24 +397,35 @@ export const content: Record<Lang, Content> = {
       title: 'Recruitment & CV Bank',
       description: 'Submit your CV for review and storage, and benefit from connections with recruiters.',
       submitCv: 'Submit CV',
+      joinTeamTitle: 'Join our team',
+      joinTeamDesc: "Send us your CV and we will contact you as soon as an opportunity matches your profile.",
       videoAlt: 'SNA Recruitment Video',
       browserNotSupported: 'Your browser does not support HTML5 video.'
     },
     video: {
       chip: 'Discover',
       title: 'Our Mission in Action',
-      subtitle: 'Discover how SNA supports agricultural stakeholders every day.'
+      subtitle: 'Discover how SNA supports agricultural stakeholders every day.',
+      thumbnailAlt: 'Video thumbnail',
+      playAriaLabel: 'Play video'
     },
     seedBank: {
       title: 'SNA Seed Bank',
       tagline: 'Safeguarding Seeds for the Future',
       subtitle: 'Our seed bank offers secure, free and long-term storage for national agricultural varieties.',
       mission: 'We collaborate with farmers and institutions to preserve agricultural biodiversity and ensure future food security.',
+      missionBullets: [
+        'Long-term conservation',
+        'Biodiversity preservation',
+        'Future food security'
+      ],
       stats: {
         samples: 'Samples stored',
         species: 'Species catalogued',
         partners: 'Depositing partners'
       },
+      servicesHeading: 'Our Services',
+      servicesIntro: 'A complete infrastructure for seed conservation',
       features: {
         conservation: {
           title: 'Conservation',
@@ -377,6 +439,13 @@ export const content: Record<Lang, Content> = {
           title: 'Research',
           desc: 'Collaboration with research institutes to improve local varieties.'
         }
+      },
+      actionVideo: {
+        chip: 'Discover',
+        title: 'The Seed Bank in Action',
+        subtitle: 'Discover how we preserve agricultural heritage',
+        posterAlt: 'Video thumbnail',
+        playAriaLabel: 'Play video'
       },
       forFarmers: {
         title: 'For Farmers',
